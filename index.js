@@ -1,3 +1,6 @@
+
+//console.log('process.env.NODE_ENV = ' + process.env.NODE_ENV);
+/*
 var webpack = require( 'webpack' );
 var WebpackDevServer = require( 'webpack-dev-server' );
 
@@ -15,3 +18,4 @@ var server = new WebpackDevServer( compiler, {
 } );
 
 server.listen( 6688 );
+*/

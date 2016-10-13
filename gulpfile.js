@@ -19,21 +19,24 @@ var browser = os.platform() === 'linux' ? 'Google chrome' : (
 //启动webpack-dev-server
 gulp.task('webpack-dev-server', function() {	
 	console.log('正在启动webpack-dev-server');	
+	
 	for(var key in webpackConfig.entry){
 		webpackConfig.entry[key].unshift("webpack-dev-server/client?http://localhost:"+host.port);
 		webpackConfig.entry[key].unshift("webpack/hot/dev-server");	
 	}
-	var compiler = webpack(webpackConfig);
+	
+	var compiler = webpack(webpackConfig);	
 	var server = new webpackDevServer(compiler, {
 	    hot: true,
 	    //historyApiFallback: false,
-	    // noInfo: true,
+	    //noInfo: true,
 	    stats: { 
 	        colors: true  // 用颜色标识
 	    },
 	    //contentBase:"./dist",
 	    //contentBase:"./",
 	});
+	
 	server.listen(host.port);
 });
 

@@ -1,0 +1,23 @@
+{
+  "name": "webpack-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {	 
+	 "test":"node index.js",
+	 "setdev":"setx NODE_ENV dev ",
+	 "setprod":"setx NODE_ENV prod ",
+	 "dev": "gulp open && gulp webpack-dev-server",
+	 "build": "webpack -p"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1",
+    "gulp": "^3.9.1",
+    "gulp-open":"^2.0.0"
+  }
+}
